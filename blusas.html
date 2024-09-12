@@ -53,45 +53,98 @@
             <p>$210,99</p>
         </div>
 
-<img class="dragon" src="./img/imagemseilong/dragon.png" alt="">
+
 
     </div>
 
 </body>
 
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+   
+ 
 
-    }
+/* Reseta alguns estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    img {
+body {
+    background-image: url('./img/imagemseilong/dragon.png'); /* Caminho da imagem */
+    background-size: cover; /* A imagem cobre toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-attachment: fixed; /* Faz com que o fundo fique fixo ao rolar a página */
+    line-height: 1.6;
+}
 
-        height: 300px;
-        padding: 50px;
 
-    }
+.caixa-principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
 
+.caixa-2 {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    width: calc(33.333% - 40px); /* Ajusta a largura para 3 colunas, subtraindo o espaço de gap */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .caixa-principal {
-        height: 100vh;
-    }
+.caixa-2 img {
+    width: 100%;
+    height: auto;
+}
 
+.caixa-2 h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.caixa-2 h4 {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #777;
+}
+
+.caixa-2 p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #e65a50;
+}
+
+.caixa-2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dragon {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
     .caixa-2 {
-        display: inline-block;
-        padding: 20px;
-        margin-left: 50px;
+        width: calc(50% - 40px); /* Ajusta a largura para 2 colunas em telas médias */
     }
-    .dragon {
-        height: 1000px;
-        z-index: -1;
-        opacity: 0.8;
-        position: fixed;
-        top: 0;
-        left: 10px;
+}
+
+@media (max-width: 768px) {
+    .caixa-2 {
+        width: calc(100% - 40px); /* Ajusta a largura para 1 coluna em telas pequenas */
     }
+}
 
 
 

@@ -7,12 +7,10 @@ const myform = document.querySelector(".formulario")
 
 
 function clique() {
-
-myform.style.left = "30%"
-myform.style.transform= "translateX(-50px)"
-
-
+    myform.style.left = "30%";
+    myform.style.transition = "left 0.5s ease, transform 0.5s ease";
 }
+
 
 function form(){
 
